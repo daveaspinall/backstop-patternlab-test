@@ -1,0 +1,19 @@
+{{# searchFormNoSubmit }}
+<form action="">
+  {{# fieldLocation }} {{> molecules-field-location }} {{/ fieldLocation }}
+
+  <div class="card-search__advanced-filters">
+    {{# advancedFilters }}
+    <a class="card-search__advanced-toggle" data-toggle=".card-search__advanced-content">
+          <span class="card-search__advanced-toggle__label">{{{ label }}}</span>
+          {{> svg-icon-plus }}
+        </a> {{/ advancedFilters }}
+
+    <div class="card-search__advanced-content">
+      {{# fieldFiltersType }} {{> molecules-field-filters }} {{/ fieldFiltersType }} {{# fieldFiltersCategory }} {{> molecules-field-filters }} {{/ fieldFiltersCategory }}
+    </div>
+  </div>
+
+  {{# submit }} {{> atoms-submit }} {{/ submit }}
+</form>
+{{/ searchFormNoSubmit }}

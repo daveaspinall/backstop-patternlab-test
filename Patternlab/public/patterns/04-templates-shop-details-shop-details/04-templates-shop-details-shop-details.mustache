@@ -1,0 +1,62 @@
+{{# header }} {{> organisms-page-header }} {{/ header }}
+
+<main class="page-main">
+  <div class="shop-map" data-shop-map data-lat="53.48197" data-lng="-2.2359679" data-title="Oxfam Emporium Manchester" data-type="donate" data-directions-url="https://maps.google.com/?daddr=53.48197,-2.2359679">
+  </div>
+
+  <div class="o-wrapper shop-details">
+    {{# detailsIntro }}
+    <section class="o-block shop-details__intro">
+      <header class="o-block__item">
+        <h2 class="shop-details__title">{{{ title }}}</h2>
+        {{# donationPoint }}
+        <span class="card-details__store-type">Donation point</span> {{/ donationPoint }}
+      </header>
+      <div class="o-block__item o-block__item--half">
+        {{# detailsDescription }}
+        <div class="shop-details__text">
+          {{{ detailsDescription }}}
+        </div>
+        {{/ detailsDescription }}
+      </div>
+      <div class="o-block__item o-block__item--half">
+        {{> molecules-list-details }}
+
+        <div class="shop-details__cta">
+          {{# cta }} {{> atoms-button }} {{/ cta }}
+        </div>
+      </div>
+    </section>
+    {{/ detailsIntro }}
+
+    <section class="o-block shop-details__donations">
+      <header class="o-block__item">
+        <h3 class="h2 shop-details__title">Donate items to us</h3>
+      </header>
+      <div class="o-block__item o-block__item--half">
+        <div class="shop-details__text">
+          <p>At the moment we really need your donations of books! So if you're looking to clear some space on your bookcase, bring your books to us where they'll help towards Oxfam's vision of ending poverty!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="o-block shop-details__volunteer">
+      <header class="o-block__item">
+        <h4 class="h2 shop-details__title">Volunteer at this store</h4>
+      </header>
+      <div class="o-block__item o-block__item--half">
+        <div class="shop-details__text">
+          <p>Volunteering with us is a challenging and rewarding experience. We have lots of opportunities and are always on the look out for passionate people to lend a hand.</p>
+          <p>If you're interested in volunteering, we'd love to hear from you. Just fill in your details below and we'll get in touch.</p>
+        </div>
+      </div>
+      <div class="o-block__item o-block__item--half">
+        {{# volunteerForm }} {{> molecules-form-volunteer }} {{/ volunteerForm }}
+      </div>
+    </section>
+  </div>
+</main>
+
+{{> organisms-page-footer }}
+
+<!-- <script async src="../../_client/scripts/shop-details.js"></script> -->

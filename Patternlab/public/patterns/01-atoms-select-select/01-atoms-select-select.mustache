@@ -1,0 +1,8 @@
+<select id="{{ select.name }}" name="{{ select.name }}" {{# select.class }} class="{{ select.class }}" {{/ select.class }}>
+  {{# select.placeholder }}
+    <option value="-1">{{ select.placeholder }}</option>
+  {{/ select.placeholder }}
+  {{# select.options }}
+    <option value="{{ value }}"{{# selected }} selected{{/ selected }}>{{ text }}</option>
+  {{/ select.options }}
+</select>

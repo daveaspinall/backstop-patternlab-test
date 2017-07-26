@@ -1,0 +1,10 @@
+<div class="o-card card-details {{ class }} {{# donationPoint }} donation-point {{/ donationPoint }}">
+  <h2 class="card-details__title">{{{ title }}}</h2>
+
+  {{# donationPoint }}
+  <span class="card-details__store-type">Donation point</span> {{/ donationPoint }} {{> molecules-list-details }}
+
+  <div class="card-details__cta">
+    {{# cta }} {{> atoms-button }} {{/ cta }}
+  </div>
+</div>

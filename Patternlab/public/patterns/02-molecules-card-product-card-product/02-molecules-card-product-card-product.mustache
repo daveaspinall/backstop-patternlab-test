@@ -1,0 +1,10 @@
+<a class="o-card card-product" href="{{ product.href }}">
+  {{> atoms-product-thumb }}
+
+  <ul class="card-product__meta">
+    <li class="card-product__meta__item card-product__price">£{{ product.price }}</li>
+    <li class="card-product__meta__item card-product__name">{{ product.name }}</li>
+    <li class="card-product__meta__item card-product__description">{{ product.description }}</li>
+    <li class="card-product__meta__item card-product__size">Size: {{ product.size }}</li>
+  </ul>
+</a>

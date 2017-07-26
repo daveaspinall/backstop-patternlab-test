@@ -1,0 +1,4 @@
+# don't need these in the test repo
+-n
+backstop_data/*
+!backstop_data/.gitkeep

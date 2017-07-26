@@ -1,0 +1,4 @@
+<input id="{{ input.id }}" class="{{ input.class }}" type="{{ input.type }}" name="{{ input.name }}" value="{{ input.value }}" placeholder="{{ input.placeholder }}"> {{# input.hasError }}
+<span class="input-error">
+    {{> svg-icon-cross }} {{ input.error }}
+  </span> {{/ input.hasError }}

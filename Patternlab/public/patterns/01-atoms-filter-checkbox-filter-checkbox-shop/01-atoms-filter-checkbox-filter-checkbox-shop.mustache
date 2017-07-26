@@ -1,0 +1,14 @@
+<div class="filter-checkbox{{# class }} {{ class }}{{/ class }}" {{# data }} data-{{ attribute }}="{{ value }}" {{/ data }}>
+  <input id="{{ id }}" class="filter-checkbox__input" name="{{ name }}" type="checkbox" {{# isDisabled }} disabled{{/ isDisabled }}>
+  <label for="{{ id }}" class="filter-checkbox__label{{# type }} filter-checkbox__label--{{ type }}{{/ type }}">
+    {{# icon }}
+      {{# icon.shop }}
+        {{> svg-icon-shop }}
+      {{/ icon.shop }}
+      {{# icon.donate }}
+        {{> svg-icon-donate }}
+      {{/ icon.donate }}
+    {{/ icon }}
+    {{{ text }}}
+  </label>
+</div>

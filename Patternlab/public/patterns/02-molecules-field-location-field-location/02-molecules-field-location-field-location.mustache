@@ -1,0 +1,13 @@
+<div class="field-location{{# class }} {{ class }}{{/ class }}">
+  {{# label }} {{> atoms-label }} {{/ label }}
+
+  <div class="field-location__wrap">
+    {{# geolocate }}
+    <a class="field-location__geolocate" data-geolocate>
+        {{> svg-icon-crosshair }}
+      </a> {{/ geolocate }} {{> atoms-input }} {{# latitude }} {{> atoms-input }} {{/latitude}} {{# longitude }} {{> atoms-input }} {{/longitude}} {{# submit }} {{> atoms-submit }} {{/ submit }}
+  </div>
+
+  <div data-field-location-error class="field-location__error {{^ hasError }}u-hidden{{/ hasError }}">{{> svg-icon-cross }} {{{ error }}}</div>
+
+</div>

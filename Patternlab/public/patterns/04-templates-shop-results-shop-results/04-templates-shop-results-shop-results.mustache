@@ -1,0 +1,17 @@
+{{# header }} {{> organisms-page-header }} {{/ header }}
+
+<div class="page-hero search-results{{# hasError }} search-results--error{{/ hasError }}">
+  <div class="page-hero__wrap">
+    <div class="page-hero__content">
+      {{> organisms-card-results }} {{^ hasError }} {{> atoms-search-json }} {{/ hasError }}
+    </div>
+  </div>
+
+  <div class="page-hero__map{{# hasError }} page-hero__map--disabled{{/ hasError }}" data-search-map></div>
+
+  {{^ hasError }} {{> molecules-view-toggle }} {{/ hasError }}
+</div>
+
+{{> organisms-page-footer }}
+
+<!-- <script async src="../../_client/scripts/shop-finder.js"></script> -->

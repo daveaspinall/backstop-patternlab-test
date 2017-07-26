@@ -1,0 +1,33 @@
+{{# header }}
+<header class="page-header">
+  <div class="page-header__wrap">
+    {{> atoms-logo }}
+
+    <div class="page-header__utils">
+      <ul class="page-header__links">
+        {{# headerLinks }}
+        <li class="page-header__links__item">
+          {{> atoms-icon-link }}
+        </li>
+        {{/ headerLinks }}
+      </ul>
+
+      {{# headerSearch }} {{> molecules-header-search }} {{/ headerSearch }}
+
+      <ul class="page-header__buttons">
+        {{# headerButtons }}
+        <li class="page-header__buttons__item">
+          {{> atoms-icon-button }}
+        </li>
+        {{/ headerButtons }}
+      </ul>
+
+      {{# menuButton }} {{> atoms-menu-button }} {{/ menuButton }}
+    </div>
+
+    {{> molecules-nav-main }}
+  </div>
+
+  {{> molecules-nav-sub }}
+</header>
+{{/ header }}

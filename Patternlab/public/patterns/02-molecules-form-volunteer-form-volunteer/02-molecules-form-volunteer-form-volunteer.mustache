@@ -1,0 +1,15 @@
+<form id="volunteer-form" class="volunteer-form shop-details__volunteer-form">
+  {{# showSuccessMessage }}
+  <div class="volunteer-form__message">
+    {{{ successMessage }}}
+  </div>
+  {{/ showSuccessMessage }}
+
+  <fieldset>
+    {{# fields }}
+    <div class="volunteer-form__field">
+      {{> atoms-label }} {{# input }} {{> atoms-input }} {{/ input }} {{# textarea }} {{> atoms-textarea }} {{/ textarea }}
+    </div>
+    {{/ fields}} {{# submit }} {{> atoms-submit }} {{/ submit }}
+  </fieldset>
+</form>

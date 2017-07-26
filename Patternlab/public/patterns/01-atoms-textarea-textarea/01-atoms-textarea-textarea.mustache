@@ -1,0 +1,4 @@
+<textarea id="{{ textarea.id }}" name="{{ textarea.name }}" placeholder="{{ textarea.placeholder }}">{{ textarea.value }}</textarea> {{# textarea.hasError }}
+<span class="input-error">
+    {{> svg-icon-cross }} {{ textarea.error }}
+  </span> {{/ textarea.hasError }}

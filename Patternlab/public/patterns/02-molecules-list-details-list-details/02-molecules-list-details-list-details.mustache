@@ -1,0 +1,72 @@
+<ul class="list-details">
+  {{# listDetails.address }}
+  <li class="list-details__item">
+    {{> svg-icon-location }} <span class="list-details__text">{{{ listDetails.address.text }}}</span>
+  </li>
+  {{/ listDetails.address }} {{# listDetails.showOpeningHours }} {{# listDetails.openingHours }}
+  <li class="list-details__item">
+    {{> svg-icon-clock }}
+
+    <div class="opening-times list-details__text">
+      <div class="opening-times__open" data-toggle=".opening-times__list">
+        <span class="opening-times__day">Open now:</span>
+        <span class="opening-times__time">{{{ current }}}</span> {{> svg-icon-chevron }}
+      </div>
+
+      <ul class="opening-times__list">
+        {{# days }}
+        <li class="opening-times__item">
+          <span class="opening-times__day">{{{ day }}}</span>
+          <span class="opening-times__time">{{{ time }}}</span>
+        </li>
+        {{/ days }}
+      </ul>
+    </div>
+  </li>
+  {{/ listDetails.openingHours }} {{# listDetails.openingHoursLegacy }}
+  <li class="list-details__item">
+    {{> svg-icon-clock }}
+
+    <div class="opening-times list-details__text">
+      {{{ text }}}
+    </div>
+  </li>
+  {{/ listDetails.openingHoursLegacy }} {{/ listDetails.showOpeningHours }} {{# listDetails.phone }}
+  <li class="list-details__item">
+    {{> svg-icon-phone }}
+
+    <div class="list-details__text">
+      <a href="tel:{{{ listDetails.phone.text }}}">
+          {{{ listDetails.phone.text }}}
+        </a>
+    </div>
+  </li>
+  {{/ listDetails.phone }} {{# listDetails.email }}
+  <li class="list-details__item">
+    {{> svg-icon-email }}
+
+    <div class="list-details__text">
+      <a href="mailto:{{{ listDetails.email.address }}}">
+          {{{ listDetails.email.text }}}
+        </a>
+    </div>
+  </li>
+  {{/ listDetails.email }} {{# listDetails.specialties }}
+  <li class="list-details__item">
+    {{> svg-icon-star }}
+
+    <span class="list-details__text">
+        <strong>Specialties:</strong> {{{ listDetails.specialties.text }}}
+      </span>
+  </li>
+  {{/ listDetails.specialties }} {{# listDetails.accepts }}
+  <li class="list-details__item">
+    {{> svg-icon-heart }}
+
+    <span class="list-details__text">
+        <strong>Accepts:</strong> {{{ listDetails.accepts.text }}}
+      </span>
+  </li>
+  {{/ listDetails.accepts }}
+
+</ul>
